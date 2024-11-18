@@ -16,6 +16,16 @@ function getRatingColor(rating) {
     if (rating < 2100) return "red";
     return "purple";
 }
+function getGroupColor(group){
+    if(group=="CP Club") return "green";
+    if(group=="Group 1") return "gray";
+    if(group=="Group 2") return "orange";
+    if(group="Advance") return   "red";
+    if(group=="Intermidate") return "blue";
+    
+
+
+}
 
 // Function to calculate the average rating
 function calculateAverage(user) {

@@ -1,10 +1,10 @@
 // Users data
 const users = [
-    { name: "Alice", codechef: 1500, codeforces: 1200, atcoder: 800, leetcode: 2000 },
-    { name: "Bob", codechef: 2000, codeforces: 1800, atcoder: 1600, leetcode: 2500 },
-    { name: "Charlie", codechef: 2500, codeforces: 2200, atcoder: 2000, leetcode: 3000 },
-    { name: "David", codechef: 1800, codeforces: 8000, atcoder: 1400, leetcode: 2200 },
-    { name: "Eve", codechef: 3000, codeforces: 2800, atcoder: 2400, leetcode: 3500 },
+    { name: "Alice", group: "cp club", codechef: 1500, codeforces: 1200, atcoder: 800, leetcode: 2000 },
+    { name: "Bob",group: "cp club", codechef: 2000, codeforces: 1800, atcoder: 1600, leetcode: 2500 },
+    { name: "Charlie",group: "cp club", codechef: 2500, codeforces: 2200, atcoder: 2000, leetcode: 3000 },
+    { name: "David",group: "cp club", codechef: 1800, codeforces: 8000, atcoder: 1400, leetcode: 2200 },
+    { name: "Eve",group: "cp club", codechef: 3000, codeforces: 2800, atcoder: 2400, leetcode: 3500 },
 ];
 
 // Function to get rating color based on value
@@ -44,6 +44,7 @@ function populateLeaderboard(sortBy = 'average') {
         row.innerHTML = `
             <td>${index + 1}</td>
             <td>${user.name}</td>
+            <td>${user.group}</td>
             <td><span class="rating ${getRatingColor(user.codechef)}">${user.codechef}</span></td>
             <td><span class="rating ${getRatingColor(user.codeforces)}">${user.codeforces}</span></td>
             <td><span class="rating ${getRatingColor(user.atcoder)}">${user.atcoder}</span></td>
@@ -73,6 +74,7 @@ function filterLeaderboard() {
         row.innerHTML = `
             <td>${index + 1}</td>
             <td>${user.name}</td>
+            <td>${user.group}</td>
             <td><span class="rating ${getRatingColor(user.codechef)}">${user.codechef}</span></td>
             <td><span class="rating ${getRatingColor(user.codeforces)}">${user.codeforces}</span></td>
             <td><span class="rating ${getRatingColor(user.atcoder)}">${user.atcoder}</span></td>

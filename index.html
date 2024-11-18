@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scaler Leaderboard</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <h1>Scaler Leaderboard</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>CodeChef</th>
-                    <th>Codeforces</th>
-                    <th>AtCoder</th>
-                    <th>LeetCode</th>
-                </tr>
-            </thead>
-            <tbody id="leaderboardBody">
-            </tbody>
-        </table>
+      <h1>Scaler Leaderboard</h1>
+      <div class="search-container">
+        <input
+            type="text"
+            id="searchBar"
+            placeholder="Search by name..."
+            onkeyup="filterLeaderboard()"
+        />
+    </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            
+            <th data-column="codechef">Codechef</th>
+            <th data-column="codeforces">Codeforces</th>
+            <th data-column="atcoder">Atcoder</th>
+            <th data-column="leetcode">Leetcode</th>
+            <th data-column="average">Average</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboardBody"></tbody>
+      </table>
     </div>
     <script type="text/javascript" src="scripts.js"></script>
-    
-</body>
+  </body>
 </html>
